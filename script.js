@@ -63,6 +63,13 @@ document.querySelector(".reviews-button3").addEventListener("click", () => {
 });
 
 
+document.querySelector(".form-btn").addEventListener("click", () => {
+  alert("Your Contact Details Sent Successfully");
+});
+
+document.querySelector(".card-button").addEventListener("click", () => {
+  alert("Your Booking is Confirmed");
+});
 
 
 const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
