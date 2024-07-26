@@ -9,6 +9,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .story-text h3 {
+            margin-top: auto;
+            font-size: 16px;
+            color: #555;
+            text-align: right;
+        }
+
+        .star-rating {
+            margin-top: 1rem;
+            font-size: 16px;
+            color: #ffdd00;
+            text-align: right;
+        }
+        .star-rating .fa-star,
+        .star-rating .fa-star-half-alt,
+        .star-rating .fa-star-o {
+            margin-right: 10px;
+            size: 10px;
+        }
+    </style>
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"/>
     <title>The Road</title>
   </head>
   <body>
@@ -26,18 +50,18 @@
             <div class="line line-2"></div>
           </div>
           <div class="nav-list">
-            <a href="#" class="nav-link center">Home</a>
-            <a href="#" class="nav-link center">Tours</a>
-            <a href="#" class="nav-link center">About Us</a>
-            <a href="#" class="nav-link center">Offer</a>
-            <a href="#" class="nav-link center">Contact</a>
+            <a href="#header" class="nav-link center list1">Home</a>
+            <a href="#popular-tours" class="nav-link center list2">Tours</a>
+            <a href="abouts.html" class="nav-link center list3">About Us</a>
+            <a href="#" class="nav-link center list4">Offer</a>
+            <a href="#contact" class="nav-link center list5">Contact</a>
           </div>
         </nav>
       </div>
       <!-- End of Navbar -->
 
       <!-- Header -->
-      <header class="header center">
+      <header class="header center" id="header">
         <div class="header-text">
           <h1 class="heading">Around the world</h1>
           <p class="header-paragraph">
@@ -65,7 +89,7 @@
       <!-- End of Header -->
 
       <!-- Popular tours -->
-      <section class="popular-tours">
+      <section class="popular-tours" id="popular-tours">
         <h1 class="popular-tours-heading">The Most Popular Tours</h1>
         <div class="cards-wrapper">
           <div class="card">
@@ -85,6 +109,8 @@
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$399</h3>
               <button class="card-button">Booking</button>
+              <br>
+              <button class="card-button reviews-button1">Reviews</button>
             </div>
           </div>
           <div class="card">
@@ -104,6 +130,8 @@
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$499</h3>
               <button class="card-button">Booking</button>
+              <br>
+              <button class="card-button reviews-button2">Reviews</button>
             </div>
           </div>
           <div class="card">
@@ -123,6 +151,8 @@
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$599</h3>
               <button class="card-button">Booking</button>
+              <br>
+              <button class="card-button reviews-button3">Reviews</button>
             </div>
           </div>
         </div>
@@ -130,7 +160,7 @@
       <!-- End of Popular tours -->
 
       <!-- Stories -->
-      <section class="stories">
+      <!-- <section class="stories">
         <div class="video-container">
           <video class="bg-video" autoplay muted loop>
             <source src="https://i.imgur.com/eFQiGDl.mp4" type="video/mp4" />
@@ -180,11 +210,199 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End of Stories -->
 
+
+      <section class="stories" id="reviews1" style="display: none;">
+        <div class="video-container">
+          <video class="bg-video" autoplay muted loop>
+            <source src="https://i.imgur.com/eFQiGDl.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="stories-wrapper">
+          <h1 style="display: block; align-items: center; font-size: 50px;">THE WILD FOREST Reviews</h1>
+          <div class="story-bg">
+            <div class="story">
+              <img
+              src="images/user1.jpeg"
+              alt="Customer image"
+              class="story-image"
+          />
+          <div class="story-text">
+              <h1 class="story-heading">
+                  A Thrilling Adventure in Nature's Lap
+              </h1>
+              <p class="story-paragraph">
+                  "The Wild Forest" is a captivating journey through the untamed wilderness that left me spellbound. The author paints a vivid picture of the lush, dense forest and its myriad inhabitants, from the tiniest insects to the majestic beasts. The protagonist's struggle for survival is gripping and the story is filled with unexpected twists that keep you on the edge of your seat. The descriptive writing makes you feel as if you are right there in the forest, experiencing the challenges and beauty firsthand. A must-read for adventure lovers and nature enthusiasts!
+              </p>
+              <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div>
+              <h3>
+                  Emily R.
+              </h3>
+              </div>
+            </div>
+          </div>
+          <div class="story-bg">
+            <div class="story">
+              <img
+                    src="images/user2.jpeg"
+                    alt="Customer image"
+                    class="story-image"
+                />
+                <div class="story-text">
+                    <h1 class="story-heading">
+                        An Engaging Tale with Some Pacing Issues
+                    </h1>
+                    <div class="star-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p class="story-paragraph">
+                        "The Wild Forest" offers an intriguing glimpse into the life of the wild and the resilience required to navigate it. The narrative is rich with detail and the characters are well-developed, each bringing a unique perspective to the story. However, I found the pacing to be uneven at times, with certain sections dragging on while others felt rushed. Despite this, the overall story is compelling and the vivid descriptions of the forest are truly mesmerizing. It's a good read for those who appreciate detailed storytelling and the raw beauty of nature.
+                    </p>
+                    <h3>
+                        Jason T.
+                    </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories" id="reviews2" style="display: none;">
+        <div class="video-container">
+          <video class="bg-video" autoplay muted loop>
+            <source src="https://i.imgur.com/eFQiGDl.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="stories-wrapper">
+          <h1 style="display: block; align-items: center; font-size: 50px;">Along the river Reviews</h1>
+          <div class="story-bg">
+            <div class="story">
+              <img
+              src="images/user3.jpeg"
+              alt="Customer image"
+              class="story-image"
+          />
+          <div class="story-text">
+              <h1 class="story-heading">
+                A Beautifully Evocative Journey
+              </h1>
+              <p class="story-paragraph">
+                "Along the River" is an exquisite exploration of nature's beauty and the human spirit. The author's vivid descriptions of the river's journey through diverse landscapes create an immersive experience that feels almost magical. The narrative is rich with emotion, capturing both the tranquility and the challenges of life along the river. The characters are deeply relatable, and their personal growth throughout the story is inspiring. This book is a true testament to the power of nature to shape our lives and hearts. Highly recommended for anyone who loves lyrical prose and evocative storytelling.    
+              </p>
+              <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+             </div>
+              <h3>
+                Sarah W.
+              </h3>
+              </div>
+            </div>
+          </div>
+          <div class="story-bg">
+            <div class="story">
+              <img
+              src="images/user4.jpeg"
+              alt="Customer image"
+              class="story-image"
+          />
+          <div class="story-text">
+              <h1 class="story-heading">
+                An Interesting Concept with Mixed Execution
+              </h1>
+              <p class="story-paragraph">
+                "Along the River" presents an intriguing concept, blending personal and environmental narratives to explore life on the river. The book's strength lies in its detailed depiction of the river and its surroundings, which creates a strong sense of place. However, the pacing can be uneven, with some sections dragging while others are too brief. The character development feels somewhat shallow, and the plot could benefit from a bit more depth and coherence. While the book has its moments of brilliance and offers a fresh perspective, it might not fully satisfy readers looking for a more cohesive and engaging storyline.  
+              </p>
+              <div class="star-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+             </div>
+              <h3>
+                Sarah W.
+              </h3>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories" id="reviews3" style="display: none;">
+        <div class="video-container">
+          <video class="bg-video" autoplay muted loop>
+            <source src="https://i.imgur.com/eFQiGDl.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="stories-wrapper">
+          <h1 style="display: block; align-items: center; font-size: 50px;">The island beach Reviews</h1>
+          <div class="story-bg">
+            <div class="story">
+              <img
+                src="images/user5.jpeg"
+                alt="Customer image"
+                class="story-image"
+              />
+              <div class="story-text">
+                <h1 class="story-heading">
+                  A Captivating Escape to Paradise
+                </h1>
+                <p class="story-paragraph">
+                  "The Island Beach" is a breathtaking escape to a tropical paradise that captivates from the very first page. The author masterfully describes the serene beauty of the island, from the crystal-clear waters to the lush, vibrant landscapes. The story follows a group of characters who find themselves at a crossroads in life, and their journey to self-discovery is both poignant and inspiring. The blend of romance, adventure, and personal growth creates a compelling narrative that feels both immersive and uplifting. This book is perfect for anyone looking to be transported to a picturesque island and experience a heartfelt, rejuvenating story.
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+               </div>
+                <h3>
+                  Olivia H
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="story-bg">
+            <div class="story">
+              <img
+                src="images/user6.jpeg"
+                alt="Customer image"
+                class="story-image"
+              />
+              <div class="story-text">
+                <h1 class="story-heading">An Enjoyable Read with Some Flaws</h1>
+                <p class="story-paragraph">
+                  "The Island Beach" offers an enjoyable glimpse into island life and the various challenges and joys that come with it. The setting is vividly portrayed, and the descriptions of the beach and its surroundings are evocative and engaging. However, the plot occasionally feels predictable, and some characters lack depth, making it hard to fully connect with their personal struggles. While the book provides a pleasant and relaxing read, it might leave readers wanting more complexity and surprise. It's a nice choice for a light beach read but might not fully satisfy those seeking a more intricate or emotionally rich story.
+                </p>
+                <div class="star-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+               </div>
+                <h3>
+                  Michael B
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+
       <!-- Contact -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <h1 class="contact-heading">Contact Us</h1>
         <form class="contact-form center">
           <div class="input-group">
@@ -198,12 +416,10 @@
           <div class="input-groups">
             <div class="input-group">
               <label>Email *</label>
-              <input
-                type="email"
-                class="contact-input"
-                placeholder="Enter Your Email"
-              />
+              <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
             </div>
+            
             <div class="input-group">
               <label>Phone</label>
               <input
@@ -228,11 +444,11 @@
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-list">
-          <a href="#" class="footer-link">Home</a>
-          <a href="#" class="footer-link">Tours</a>
-          <a href="#" class="footer-link">About Us</a>
+          <a href="#header" class="footer-link">Home</a>
+          <a href="#popular-tours" class="footer-link">Tours</a>
+          <a href="abouts.html" class="footer-link">About Us</a>
           <a href="#" class="footer-link">Offer</a>
-          <a href="#" class="footer-link">Contact</a>
+          <a href="#contact" class="footer-link">Contact</a>
         </div>
         <p class="footer-paragraph">
           Copyright &copy; CodeAndCreate All Rights Reserved
