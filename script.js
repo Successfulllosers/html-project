@@ -63,7 +63,15 @@ document.querySelector(".reviews-button3").addEventListener("click", () => {
 });
 
 const successModal = document.getElementById("successModal1");
-document.querySelector(".submit-booking").addEventListener("click",()=>{
+document.querySelector(".submit-booking3").addEventListener("click",()=>{
+  successModal.style.display = "block";
+});
+
+document.querySelector(".submit-booking2").addEventListener("click",()=>{
+  successModal.style.display = "block";
+});
+
+document.querySelector(".submit-booking1").addEventListener("click",()=>{
   successModal.style.display = "block";
 });
 
