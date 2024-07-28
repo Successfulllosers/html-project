@@ -108,7 +108,7 @@
             <div class="back-side center">
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$399</h3>
-              <button class="card-button">Booking</button>
+              <button class="card-button submit-booking">Booking</button>
               <br>
               <button class="card-button reviews-button1">Reviews</button>
             </div>
@@ -129,7 +129,7 @@
             <div class="back-side center">
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$499</h3>
-              <button class="card-button">Booking</button>
+              <button class="card-button submit-booking">Booking</button>
               <br>
               <button class="card-button reviews-button2">Reviews</button>
             </div>
@@ -150,7 +150,7 @@
             <div class="back-side center">
               <button class="navigation-button">&lt;&lt; back</button>
               <h3 class="tour-price">$599</h3>
-              <button class="card-button">Booking</button>
+              <button class="card-button submit-booking">Booking</button>
               <br>
               <button class="card-button reviews-button3">Reviews</button>
             </div>
@@ -158,6 +158,13 @@
         </div>
       </section>
       <!-- End of Popular tours -->
+
+      <div id="successModal1" class="modal">
+        <div class="modal-content">
+            <span class="close1">&times;</span>
+            <p>Your Booking is Confirmed!</p>
+        </div>
+    </div>
 
       <!-- Stories -->
       <!-- <section class="stories">
@@ -404,41 +411,104 @@
       <!-- Contact -->
       <section class="contact" id="contact">
         <h1 class="contact-heading">Contact Us</h1>
-        <form class="contact-form center">
-          <div class="input-group">
-            <label>Full Name *</label>
-            <input
-              type="text"
-              class="contact-input"
-              placeholder="Enter Your Name"
-            />
-          </div>
-          <div class="input-groups">
+        <form id="contactForm" class="contact-form center">
             <div class="input-group">
-              <label>Email *</label>
-              <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-            <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+                <label>Full Name *</label>
+                <input
+                    type="text"
+                    class="contact-input"
+                    placeholder="Enter Your Name"
+                    required
+                />
             </div>
-            
+            <div class="input-groups">
+                <div class="input-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    <span id="emailError">Please enter a valid email address.</span>
+                </div>
+                
+                <div class="input-group">
+                    <label>Phone</label>
+                    <input
+                        type="text"
+                        class="contact-input"
+                        placeholder="Enter Phone Number"
+                    />
+                </div>
+            </div>
             <div class="input-group">
-              <label>Phone</label>
-              <input
-                type="text"
-                class="contact-input"
-                placeholder="Enter Phone Number"
-              />
+                <label>Message</label>
+                <textarea
+                    class="form-textarea"
+                    placeholder="Your Message Here..."
+                    required
+                ></textarea>
             </div>
-          </div>
-          <div class="input-group">
-            <label>Message</label>
-            <textarea
-              class="form-textarea"
-              placeholder="Your Message Here..."
-            ></textarea>
-          </div>
-          <input type="submit" value="Submit" class="form-btn" />
+            <input type="submit" value="Submit" class="form-btn" id="submitButton" />
         </form>
-      </section>
+    </section>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Your data has been sent successfully!</p>
+      </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+        const submitButton = document.getElementById("submitButton");
+        const successModal = document.getElementById("successModal");
+        const closeModal = document.querySelector(".close");
+
+        function validateEmail() {
+            const email = emailInput.value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailPattern.test(email)) {
+                emailError.style.display = "none";
+                submitButton.disabled = false;
+            } else {
+                emailError.style.display = "block";
+                submitButton.disabled = true;
+            }
+        }
+
+        emailInput.addEventListener("input", validateEmail);
+
+        // Initial validation
+        validateEmail();
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            if (submitButton.disabled) {
+                event.preventDefault();
+            } else {
+                // Prevent the default form submission
+                event.preventDefault();
+                // Show the success modal
+                successModal.style.display = "block";
+                // Reset the form
+                document.getElementById("contactForm").reset();
+                // Disable the submit button again
+                submitButton.disabled = true;
+            }
+        });
+
+        // Close the modal when the user clicks the close button
+        closeModal.addEventListener("click", function () {
+            successModal.style.display = "none";
+        });
+
+        // Close the modal when the user clicks anywhere outside the modal
+        window.addEventListener("click", function (event) {
+            if (event.target == successModal) {
+                successModal.style.display = "none";
+            }
+        });
+    });
+  </script>
       <!-- End of Contact -->
 
       <!-- Footer -->
@@ -455,7 +525,9 @@
         </p>
       </footer>
       <!-- End of Footer -->
-    </div>
+      <div id="toast" class="toast hidden">Your Booking is Confirmed</div>
     <script src="script.js"></script>
   </body>
 </html>
+
+

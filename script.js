@@ -62,14 +62,22 @@ document.querySelector(".reviews-button3").addEventListener("click", () => {
   }
 });
 
-
-document.querySelector(".form-btn").addEventListener("click", () => {
-  alert("Your Contact Details Sent Successfully");
+const successModal = document.getElementById("successModal1");
+document.querySelector(".submit-booking").addEventListener("click",()=>{
+  successModal.style.display = "block";
 });
 
-document.querySelector(".card-button").addEventListener("click", () => {
-  alert("Your Booking is Confirmed");
+const closeModal = document.querySelector(".close1");
+closeModal.addEventListener("click", function () {
+  successModal.style.display = "none";
 });
+
+window.addEventListener("click", function (event) {
+  if (event.target == successModal) {
+      successModal.style.display = "none";
+  }
+});
+
 
 
 const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
